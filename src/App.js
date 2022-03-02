@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import { Box, VStack  } from '@chakra-ui/react'
+import Profile from './components/Profile'
+import MediaLinks from './components/Medias'
+import Links from './components/Links'
+import { useDisclosure } from '@chakra-ui/react'
+import AddLink from './components/AddLink';
+import AddLinkV2 from './components/AddLinkV2';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box bgColor={'white'} height={'100vh'}>
+      <Box bgColor={'black'} height={'100vh'} borderRadius={'3xl'} mx={'20px'}>
+        <Box height={'100vh'} borderRadius={'3xl'} w={'70%'} mx={'auto'}>
+          <VStack>
+            <AddLinkV2 />
+            {/*Add Button Component*/}
+            {/*Profile Component*/}
+            <Profile />
+            {/*Medias Component*/}
+            <MediaLinks />
+            {/*Links Component*/}
+            <Links />
+          </VStack>
+        </Box>
+      </Box>
+    </Box>
   );
 }
 
